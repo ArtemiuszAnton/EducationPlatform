@@ -1,62 +1,63 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { createData, getAllUser, getAllUserById, updateUser, deleteUser, partUpdateUser } from '../service/service';
+import { iUser } from '../interfaces/interfaces'
 const router = Router();
 
-router.post('/', async (req, res) => {
+router.post('/', async (req: Request, res: Response) => {
     try {
         const { name, surname, email, pwd } = req.body;
-        const data = await createData(name, surname, email, pwd)
+        const data: iUser[] = await createData(name, surname, email, pwd)
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)
     }
 })
 
-router.get('/', async (req, res) => {
+router.get('/', async (_req: Request, res: Response) => {
     try {
-        const data = await getAllUser()
+        const data: iUser[] = await getAllUser()
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const data = await getAllUserById(id)
+        const data: iUser[] = await getAllUserById(id)
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)
     }
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const { name, surname, email, pwd } = req.body;
-        const data = await updateUser(id, name, surname, email, pwd)
+        const data: iUser[] = await updateUser(id, name, surname, email, pwd)
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)
     }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const data = await deleteUser(id)
+        const data: iUser[] = await deleteUser(id)
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)
     }
 })
 
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const body = req.body;
-        const data = await partUpdateUser(id, body)
+        const body: iUser = req.body;
+        const data: iUser[] = await partUpdateUser(id, body)
         res.status(200).send(data)
     } catch (error: any) {
         res.status(400).send(error.message)

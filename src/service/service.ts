@@ -1,37 +1,38 @@
+import { iUser } from '../interfaces/interfaces';
 import { createDataDB, getAllUserDB, getAllUserByIdDB, updateUserDB, deleteUserDB, partUpdateUserDB } from '../repository/repository';
 
-async function createData(name, surname, email, pwd) {
+async function createData(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
     const data = await createDataDB(name, surname, email, pwd)
     if (!data.length) throw new Error('data do not create')
     return data
 }
 
-async function getAllUser() {
-    const data = await getAllUserDB()
+async function getAllUser(): Promise<iUser[]>  {
+    const data: iUser[] = await getAllUserDB()
     if (!data.length) throw new Error('database is empty')
     return data
 }
 
-async function getAllUserById(id) {
-    const data = await getAllUserByIdDB(id)
+async function getAllUserById(id: number): Promise<iUser[]>  {
+    const data: iUser[] = await getAllUserByIdDB(id)
     if (!data.length) throw new Error('Id is not found')
     return data
 }
 
-async function updateUser(id, name, surname, email, pwd) {
-    const data = await updateUserDB(id, name, surname, email, pwd)
+async function updateUser(id: number, name: string, surname: string, email: string, pwd: string): Promise<iUser[]>  {
+    const data: iUser[] = await updateUserDB(id, name, surname, email, pwd)
     if (!data.length) throw new Error('Data is not saved')
     return data
 }
 
-async function deleteUser(id) {
-    const data = await deleteUserDB(id)
+async function deleteUser(id: number): Promise<iUser[]>  {
+    const data: iUser[] = await deleteUserDB(id)
     if (!data.length) throw new Error('Id is not found, data was not deleted')
     return data
 }
 
-async function partUpdateUser(id, body) {
-    const data = await partUpdateUserDB(id, body)
+async function partUpdateUser(id: number, body: iUser): Promise<iUser[]>  {
+    const data: iUser[] = await partUpdateUserDB(id, body)
     if (!data.length) throw new Error('Data is not changed')
     return data
 }
