@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { createCourse, getAllCourses, updateCourse } from '../service/course.service'
+import { createCourse, getAllCourses, updateCourse, deleteCourse, updateCourseInfo } from '../service/course.service'
 import { iCourse } from '../interfaces/interfaces'
 const routeCourse = Router();
 
@@ -27,6 +27,27 @@ routeCourse.put('/:id', async (req: Request, res: Response) => {
         const { course, description } = req.body;
         const { id } = req.params;
         const data = await updateCourse(id, course, description);
+        res.status(200).send(data)
+    } catch (er: any) {
+        res.status(404).send(er.message)
+    }
+})
+
+routeCourse.delete('/:id', async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const data = await deleteCourse(id);
+        res.status(404).send(data)
+    } catch (er: any) {
+        res.status(404).send(er.message)
+    }
+})
+
+routeCourse.patch('/:id', async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const body: iCourse = req.body;
+        const data: iCourse[] = await updateCourseInfo(id, body);
         res.status(200).send(data)
     } catch (er: any) {
         res.status(404).send(er.message)

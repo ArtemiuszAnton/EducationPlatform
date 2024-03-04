@@ -1,5 +1,5 @@
 import { iUser } from '../interfaces/interfaces';
-import { createDataDB, getAllUserDB, getAllUserByIdDB, updateUserDB, deleteUserDB, partUpdateUserDB } from '../repository/repository';
+import { createDataDB, getAllUserDB, getUserByIdDB, updateUserDB, deleteUserDB, partUpdateUserDB } from '../repository/user.repository';
 
 async function createData(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
     const data = await createDataDB(name, surname, email, pwd)
@@ -13,8 +13,8 @@ async function getAllUser(): Promise<iUser[]>  {
     return data
 }
 
-async function getAllUserById(id: number): Promise<iUser[]>  {
-    const data: iUser[] = await getAllUserByIdDB(id)
+async function getUserById(id: number): Promise<iUser[]>  {
+    const data: iUser[] = await getUserByIdDB(id)
     if (!data.length) throw new Error('Id is not found')
     return data
 }
@@ -39,4 +39,4 @@ async function partUpdateUser(id: number, body: iUser): Promise<iUser[]>  {
 
 
 
-export { createData, getAllUser, getAllUserById, updateUser, deleteUser, partUpdateUser }
+export { createData, getAllUser, getUserById, updateUser, deleteUser, partUpdateUser }

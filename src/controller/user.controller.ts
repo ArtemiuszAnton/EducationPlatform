@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { createData, getAllUser, getAllUserById, updateUser, deleteUser, partUpdateUser } from '../service/service';
+import { createData, getAllUser, getUserById, updateUser, deleteUser, partUpdateUser } from '../service/user.service';
 import { iUser } from '../interfaces/interfaces'
 const router = Router();
 
@@ -8,8 +8,8 @@ router.post('/', async (req: Request, res: Response) => {
         const { name, surname, email, pwd } = req.body;
         const data: iUser[] = await createData(name, surname, email, pwd)
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 
@@ -17,18 +17,18 @@ router.get('/', async (_req: Request, res: Response) => {
     try {
         const data: iUser[] = await getAllUser()
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 
 router.get('/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const data: iUser[] = await getAllUserById(id)
+        const data: iUser[] = await getUserById(id)
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 
@@ -38,8 +38,8 @@ router.put('/:id', async (req: Request, res: Response) => {
         const { name, surname, email, pwd } = req.body;
         const data: iUser[] = await updateUser(id, name, surname, email, pwd)
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 
@@ -48,8 +48,8 @@ router.delete('/:id', async (req: Request, res: Response) => {
         const { id } = req.params;
         const data: iUser[] = await deleteUser(id)
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 
@@ -59,8 +59,8 @@ router.patch('/:id', async (req: Request, res: Response) => {
         const body: iUser = req.body;
         const data: iUser[] = await partUpdateUser(id, body)
         res.status(200).send(data)
-    } catch (error: any) {
-        res.status(400).send(error.message)
+    } catch (er: any) {
+        res.status(400).send(er.message)
     }
 })
 

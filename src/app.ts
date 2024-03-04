@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { json } from 'body-parser';
-import router from './controller/controller';
+import router from './controller/user.controller';
 import routeCourse from './controller/course.controller';
 const app = express();
 

@@ -1,5 +1,5 @@
 import { iCourse } from '../interfaces/interfaces';
-import { createCourseDB, getAllCoursesDB, updateCourseDB } from '../repository/course.repository';
+import { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, updateCourseInfoDB } from '../repository/course.repository';
 
 async function createCourse(course: string, description: string): Promise<iCourse[]> {
     const data: iCourse[] = await createCourseDB(course, description);
@@ -16,4 +16,14 @@ async function updateCourse(id: number, course: string, description: string): Pr
     return data
 }
 
-export { createCourse, getAllCourses, updateCourse }
+async function deleteCourse(id: number): Promise<iCourse[]> {
+    const data: iCourse[] = await deleteCourseDB(id);
+    return data
+}
+
+async function updateCourseInfo(id: number, body: iCourse): Promise<iCourse[]> {
+    const data: iCourse[] = await updateCourseInfoDB(id, body);
+    return data
+}
+
+export { createCourse, getAllCourses, updateCourse, deleteCourse, updateCourseInfo }
