@@ -1,4 +1,4 @@
-import { createCourse,getAllCourses } from "../../src/service/course.service";
+import { createCourse } from "../../src/service/course.service";
 import * as repository from '../../src/repository/course.repository';
 
 
@@ -16,6 +16,5 @@ describe('createCourse', () => {
 describe('getAllCourses', ()=>{
     test('corrected', async ()=>{
         const mock = jest.spyOn(repository, 'getAllCoursesDB');
-        // mock.mockResolvedValue()
     })
 })
