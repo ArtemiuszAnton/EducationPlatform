@@ -3,16 +3,19 @@ import { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, update
 
 async function createCourse(course: string, description: string): Promise<iCourse[]> {
   const data: iCourse[] = await createCourseDB(course, description);
+  if (!data.length) throw new Error('data not created');
   return data;
 }
 
 async function getAllCourses(): Promise<iCourse[]> {
   const data: iCourse[] = await getAllCoursesDB();
+  if (!data.length) throw new Error('data is empty');
   return data;
 }
 
 async function updateCourse(id: number, course: string, description: string): Promise<iCourse[]> {
   const data: iCourse[] = await updateCourseDB(id, course, description);
+  if (!data.length) throw new Error('data is empty');
   return data;
 }
 
