@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    color: black;
+    font: 700 16px Montserrat;
+}
+
+.header .login {
+    font: 700 16px Montserrat;
+    color: black;
+    height: 43;
+    padding: 13px 21px;
+    background-color: white;
+    border-width: 0;
+}
+
+.header .signup {
+    font: 700 16px Montserrat;
+    width: 125px;
+    height: 43px;
+    padding: 13px 21px;
+    border-radius: 14px;
+    background: #2B788B;
+    color: aliceblue;
+    border-width: 0;
+}
+
+.main {
+    display: flex;
+    margin-top: 100px;
+}
+
+.main .left_side h5 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.14em;
+    text-align: left;
+    color: #2B788B;
+}
+
+.main .left_side h1 {
+font-family: Montserrat;
+font-size: 56px;
+font-weight: 400;
+line-height: 67.2px;
+letter-spacing: -0.04em;
+text-align: left;
+color: black
+}
+
