@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 * {
   margin: 0;
@@ -13,4 +14,6 @@
 body {
   max-width: 1220px;
   margin: 0 auto;
+  background: rgb(246, 245, 244)
 }
+
