@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 24px;
+
 }
 
 .header p {
@@ -14,7 +16,7 @@
     color: black;
     height: 43;
     padding: 13px 21px;
-    background-color: white;
+    background: rgb(246, 245, 244);
     border-width: 0;
 }
 
@@ -27,4 +29,13 @@
     background: #2B788B;
     color: aliceblue;
     border-width: 0;
+}
+
+.border_line {
+    display: flex;
+    height: 1px;
+    background: #E0E0E0;
+    width: 100%;
+
+    /* Как сделать на всю ширину экрана */
 }

@@ -1,4 +1,4 @@
- .header {
+ /* .header {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -38,7 +38,7 @@
      width: 100%;
 
      /* Как сделать на всю ширину экрана */
- }
+
 
  main {
      width: 1180px;
@@ -299,7 +299,7 @@
  }
 
 
- footer {
+ /* footer {
      padding: 40px 0 40px 0;
  }
 
@@ -333,7 +333,7 @@
      height: 1, 2px;
      background: #E0E0E0;
      width: 100%;
-     /* Как сделать на всю ширину экрана */
+
  }
 
  .under_info {
@@ -344,12 +344,34 @@
  .under_info .soc_networks {
      display: flex;
      justify-content: space-between;
+     gap: 30px;
  }
 
- .under_info p {
+ .under_info .soc_networks .github{
+     height: 20px;
+     width: 25px;
+     background-image: url('./assets/github.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+ }
+ .under_info .soc_networks .gt{
+     height: 18px;
+     width: 28px;
+     background-image: url('./assets/GT.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+ }
+ .under_info .soc_networks .youtube{
+     height: 18px;
+     width: 25px;
+     background-image: url('./assets/youtube.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+ }
+
+ .under_info .trade_mark p {
      font: 600 12px Montserrat;
      line-height: 12px;
-     text-align: left;
      color: #757575;
  }
 
@@ -357,6 +379,5 @@
      text-decoration: underline;
      font: 600 12px Montserrat;
      line-height: 12px;
-     text-align: left;
      color: #757575;
- }
+ } */

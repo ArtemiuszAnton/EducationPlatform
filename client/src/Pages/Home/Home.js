@@ -1,16 +1,11 @@
-import style from './home.module.css'
+import style from './home.module.css';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
     return <div>
-        <div className={style.header}>
-            <p>Hschool</p>
-            <div>
-                <button className={style.login}>Login →</button>
-                <button className={style.signup}>Sign Up</button>
-            </div>
-        </div>
 
-        <div className={style.border_line}></div>
+        <Header />
 
         <main>
             <div className={style.first_block}>
@@ -67,7 +62,9 @@ function Home() {
 
         </main>
 
-        <footer>
+        <Footer/>
+
+        {/* <footer>
             <div className={style.links}>
                 <div className={style.pages}>
                     <p>Home</p>
@@ -88,13 +85,13 @@ function Home() {
                 <div className={style.soc_networks}>
                     <div className={style.github}></div>
                     <div className={style.gt}></div>
-                    <div className={style.yuotube}></div>
+                    <div className={style.youtube}></div>
                 </div>
                 <div className={style.trade_mark}>
                     <p>©2021 Hschool. Project for <span>Hschool</span>.</p>
                 </div>
             </div>
-        </footer>
+        </footer>  */}
 
     </div>
 }
