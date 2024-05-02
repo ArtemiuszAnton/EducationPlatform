@@ -1,387 +1,263 @@
- /* .header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 24px;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 1180px; */
+    margin: auto;
+    max-width: 1220px;
+    /* height: 700px; */
+}
 
- }
+main .first_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
- .header p {
-     color: black;
-     font: 700 16px Montserrat;
- }
+.first_block .left_side {
+    margin-top: 95px;
+    width: 500px;
 
- .header .login {
-     font: 700 16px Montserrat;
-     color: black;
-     height: 43;
-     padding: 13px 21px;
-     background: rgb(246, 245, 244);
-     border-width: 0;
- }
+}
 
- .header .signup {
-     font: 700 16px Montserrat;
-     width: 125px;
-     height: 43px;
-     padding: 13px 21px;
-     border-radius: 14px;
-     background: #2B788B;
-     color: aliceblue;
-     border-width: 0;
- }
+.first_block .left_side h5 {
+    font: 700 16px Montserrat;
+    line-height: 16px;
+    letter-spacing: 0.14em;
+    text-align: left;
+    color: #2B788B;
+}
 
- .border_line {
-     display: flex;
-     height: 1px;
-     background: #E0E0E0;
-     width: 100%;
+.first_block .left_side h1 {
+    margin-top: 24px;
+    font: 400 54px Dela Gothic One;
+    text-align: left;
 
-     /* Как сделать на всю ширину экрана */
+}
 
+.first_block .left_side p {
+    margin-top: 30px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #757575;
+}
 
- main {
-     align-items: center;
-     /* width: 1180px; */
-     margin: auto;
-     max-width: 1220px;
-     /* height: 700px; */
- }
+.first_block .button {
+    margin-top: 32px;
+    background: #C3DCE3;
+    color: #2B788B;
+    width: 175px;
+    height: 44px;
+    padding: 14px 22px 14px 22px;
+    gap: 19px;
+    border-radius: 100px 100px 100px 100px;
+    font: 700 16px Montserrat;
+    line-height: 16px;
+}
 
- main .first_block {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+.first_block .lights {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
 
- .first_block .left_side {
-     margin-top: 95px;
-     width: 500px;
+.first_block .lights .light_img {
+    background-image: url('./assets/Vector.svg');
+    background-size: contain;
+    height: 30px;
+    width: 24px;
+}
 
- }
+.first_block .lights p {
+    margin-top: 49px;
+    font-family: Dela Gothic One;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: black;
+}
 
- .first_block .left_side h5 {
-     font: 700 16px Montserrat;
-     line-height: 16px;
-     letter-spacing: 0.14em;
-     text-align: left;
-     color: #2B788B;
- }
+.first_block .lights span {
+    font-family: Dela Gothic One;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #2B788B;
+}
 
- .first_block .left_side h1 {
-     margin-top: 24px;
-     font: 400 54px Dela Gothic One;
-     text-align: left;
+.first_block .left_side .students_about {
+    margin: 5px 0 0 40px;
+    font: 600 16px Montserrat;
+    text-align: left;
+}
 
- }
+.first_block .student_img {
+    background-image: url(./assets/chel.svg);
+    width: 636px;
+    height: 507px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
- .first_block .left_side p {
-     margin-top: 30px;
-     font-family: Montserrat;
-     font-size: 18px;
-     font-weight: 600;
-     text-align: left;
-     color: #757575;
- }
+main .second_block {
+    display: flex;
+    justify-content: space-between;
+    /* background-size: 100%; */
+    background: white;
+    margin: 0 auto;
+    margin-top: 77px;
+}
 
- .first_block .button {
-     margin-top: 32px;
-     background: #C3DCE3;
-     color: #2B788B;
-     width: 175px;
-     height: 44px;
-     padding: 14px 22px 14px 22px;
-     gap: 19px;
-     border-radius: 100px 100px 100px 100px;
-     font: 700 16px Montserrat;
-     line-height: 16px;
- }
+.second_block .dzen_student {
+    background-image: url('./assets/dzen_student.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 580px;
+    height: 445px;
+}
 
- .first_block .lights {
-     display: flex;
-     justify-content: flex-start;
-     align-items: baseline;
- }
+.second_block .mini_games_learn {
+    width: 480px;
+}
 
- .first_block .lights .light_img {
-     background-image: url('./assets/Vector.svg');
-     background-size: contain;
-     height: 30px;
-     width: 24px;
- }
+.second_block .mini_games_learn h1 {
+    font: 400 47px Dela Gothic One;
+    line-height: 48px;
+    text-align: left;
+}
 
- .first_block .lights p {
-     margin-top: 49px;
-     font-family: Dela Gothic One;
-     font-size: 40px;
-     font-weight: 400;
-     line-height: 40px;
-     letter-spacing: -0.02em;
-     text-align: left;
-     color: black;
- }
+.second_block .mini_games_learn p {
+    font: 600 18px Montserrat;
+    /* line-height: 25.2px; */
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #757575;
+    margin-top: 30px;
 
- .first_block .lights span {
-     font-family: Dela Gothic One;
-     font-size: 40px;
-     font-weight: 400;
-     line-height: 40px;
-     letter-spacing: -0.02em;
-     text-align: left;
-     color: #2B788B;
- }
+}
 
- .first_block .left_side .students_about {
-     margin: 5px 0 0 40px;
-     font: 600 16px Montserrat;
-     text-align: left;
- }
+.second_block .game_links {
+    display: flex;
+    margin-top: 30px;
+}
 
- .first_block .student_img {
-     background-image: url(./assets/chel.svg);
-     width: 636px;
-     height: 507px;
-     background-size: contain;
-     background-repeat: no-repeat;
- }
+.second_block .game_links .sprint_game {
+    background-image: url('./assets/sprint.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 145px;
+    width: 131px;
+}
 
- main .second_block {
-     display: flex;
-     justify-content: space-between;
-     /* background-size: 100%; */
-     background: white;
-     margin: 0 auto;
-     margin-top: 77px;
- }
+.second_block .game_links .tasks_game {
+    background-image: url('./assets/tasks.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 145px;
+    width: 172px;
+    margin-left: 21px;
+}
 
- .second_block .dzen_student {
-     background-image: url('./assets/dzen_student.svg');
-     background-size: contain;
-     background-repeat: no-repeat;
-     width: 580px;
-     height: 445px;
- }
+.third_block {
+    display: flex;
+    justify-content: space-between;
+}
 
- .second_block .mini_games_learn {
-     width: 480px;
- }
+.third_block .books_info {
+    width: 475px;
+}
 
- .second_block .mini_games_learn h1 {
-     font: 400 47px Dela Gothic One;
-     line-height: 48px;
-     text-align: left;
- }
+.third_block .books_info h1 {
+    margin-top: 136px;
+    font: 400 47px Dela Gothic One;
+    line-height: 48px;
+    text-align: left;
+}
 
- .second_block .mini_games_learn p {
-     font: 600 18px Montserrat;
-     /* line-height: 25.2px; */
-     letter-spacing: -0.04em;
-     text-align: left;
-     color: #757575;
-     margin-top: 30px;
+.third_block .books_info p {
+    margin-top: 30px;
+    font: 600 18px Montserrat;
+    width: 397px;
+    /* line-height: 25.2px; */
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #757575;
+}
 
- }
+.third_block .books_info div {
+    margin-top: 32px;
+    background: #C3DCE3;
+    color: #2B788B;
+    width: 144px;
+    height: 44px;
+    padding: 14px 22px 14px 22px;
+    gap: 19px;
+    border-radius: 100px 100px 100px 100px;
+    font: 700 16px Montserrat;
+    line-height: 16px;
+}
 
- .second_block .game_links {
-     display: flex;
-     margin-top: 30px;
- }
+.third_block .books_student {
+    background-image: url('./assets/books_student.svg');
+    width: 425px;
+    height: 474px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 100px;
+}
 
- .second_block .game_links .sprint_game {
-     background-image: url('./assets/sprint.svg');
-     background-repeat: no-repeat;
-     background-size: contain;
-     height: 145px;
-     width: 131px;
- }
+.fourth_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    background: white;
 
- .second_block .game_links .tasks_game {
-     background-image: url('./assets/tasks.svg');
-     background-repeat: no-repeat;
-     background-size: contain;
-     height: 145px;
-     width: 172px;
-     margin-left: 21px;
- }
+}
 
- .third_block {
-     display: flex;
-     justify-content: space-between;
- }
+.fourth_block .students_duet {
+    background-image: url('./assets/duet_students.svg');
+    width: 680px;
+    height: 410px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 100px;
+    margin-top: 95px;
+}
 
- .third_block .books_info {
-     width: 475px;
- }
+.fourth_block .student_stat {
+    width: 475px;
+}
 
- .third_block .books_info h1 {
-     margin-top: 136px;
-     font: 400 47px Dela Gothic One;
-     line-height: 48px;
-     text-align: left;
- }
+.fourth_block .student_stat h1 {
+    margin-top: 149px;
+    font: 400 47px Dela Gothic One;
+    line-height: 48px;
+    text-align: left;
+}
 
- .third_block .books_info p {
-     margin-top: 30px;
-     font: 600 18px Montserrat;
-     width: 397px;
-     /* line-height: 25.2px; */
-     letter-spacing: -0.04em;
-     text-align: left;
-     color: #757575;
- }
+.fourth_block .student_stat p {
+    font: 600 18px Montserrat;
+    width: 397px;
+    text-align: left;
+    color: #757575;
+    margin-top: 30px;
+}
 
- .third_block .books_info div {
-     margin-top: 32px;
-     background: #C3DCE3;
-     color: #2B788B;
-     width: 144px;
-     height: 44px;
-     padding: 14px 22px 14px 22px;
-     gap: 19px;
-     border-radius: 100px 100px 100px 100px;
-     font: 700 16px Montserrat;
-     line-height: 16px;
- }
-
- .third_block .books_student {
-     background-image: url('./assets/books_student.svg');
-     width: 425px;
-     height: 474px;
-     background-size: contain;
-     background-repeat: no-repeat;
-     margin-right: 100px;
- }
-
- .fourth_block {
-     display: flex;
-     justify-content: space-between;
-     margin-bottom: 95px;
-     background: white;
-
- }
-
- .fourth_block .students_duet {
-     background-image: url('./assets/duet_students.svg');
-     width: 680px;
-     height: 410px;
-     background-size: contain;
-     background-repeat: no-repeat;
-     margin-right: 100px;
-     margin-top: 95px;
- }
-
- .fourth_block .student_stat {
-     width: 475px;
- }
-
- .fourth_block .student_stat h1 {
-     margin-top: 149px;
-     font: 400 47px Dela Gothic One;
-     line-height: 48px;
-     text-align: left;
- }
-
- .fourth_block .student_stat p {
-     font: 600 18px Montserrat;
-     width: 397px;
-     text-align: left;
-     color: #757575;
-     margin-top: 30px;
- }
-
- .fourth_block .student_stat div {
-     background: #C3DCE3;
-     color: #2B788B;
-     width: 142px;
-     height: 44px;
-     padding: 14px 22px 14px 22px;
-     gap: 19px;
-     border-radius: 100px 100px 100px 100px;
-     font: 700 16px Montserrat;
-     line-height: 16px;
-     margin-top: 32px;
- }
-
-
- /* footer {
-     padding: 40px 0 40px 0;
- }
-
- .links {
-     display: flex;
-     justify-content: space-between;
- }
-
- .links p {
-     font: 600 14px Montserrat;
-     line-height: 14px;
-     text-align: left;
-     color: #757575;
- }
-
- .pages {
-     display: flex;
-     justify-content: space-between;
-     gap: 30px;
- }
-
- .lectures {
-     display: flex;
-     justify-content: space-between;
-     gap: 30px;
- }
-
- footer .border_line {
-     margin: 20px 0 20px 0;
-     display: flex;
-     height: 1, 2px;
-     background: #E0E0E0;
-     width: 100%;
-
- }
-
- .under_info {
-     display: flex;
-     justify-content: space-between;
- }
-
- .under_info .soc_networks {
-     display: flex;
-     justify-content: space-between;
-     gap: 30px;
- }
-
- .under_info .soc_networks .github{
-     height: 20px;
-     width: 25px;
-     background-image: url('./assets/github.svg');
-     background-size: contain;
-     background-repeat: no-repeat;
- }
- .under_info .soc_networks .gt{
-     height: 18px;
-     width: 28px;
-     background-image: url('./assets/GT.svg');
-     background-size: contain;
-     background-repeat: no-repeat;
- }
- .under_info .soc_networks .youtube{
-     height: 18px;
-     width: 25px;
-     background-image: url('./assets/youtube.svg');
-     background-size: contain;
-     background-repeat: no-repeat;
- }
-
- .under_info .trade_mark p {
-     font: 600 12px Montserrat;
-     line-height: 12px;
-     color: #757575;
- }
-
- .under_info span {
-     text-decoration: underline;
-     font: 600 12px Montserrat;
-     line-height: 12px;
-     color: #757575;
- } */
+.fourth_block .student_stat div {
+    background: #C3DCE3;
+    color: #2B788B;
+    width: 142px;
+    height: 44px;
+    padding: 14px 22px 14px 22px;
+    gap: 19px;
+    border-radius: 100px 100px 100px 100px;
+    font: 700 16px Montserrat;
+    line-height: 16px;
+    margin-top: 32px;
+}
