@@ -5,7 +5,6 @@ main {
     /* width: 1180px; */
     margin: auto;
     max-width: 1220px;
-    /* height: 700px; */
 }
 
 main .first_block {
@@ -23,7 +22,6 @@ main .first_block {
 .first_block .left_side h5 {
     font: 700 16px Montserrat;
     line-height: 16px;
-    letter-spacing: 0.14em;
     text-align: left;
     color: #2B788B;
 }
@@ -37,9 +35,7 @@ main .first_block {
 
 .first_block .left_side p {
     margin-top: 30px;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 600;
+    font: 600 18px Montserrat;
     text-align: left;
     color: #757575;
 }
@@ -72,9 +68,7 @@ main .first_block {
 
 .first_block .lights p {
     margin-top: 49px;
-    font-family: Dela Gothic One;
-    font-size: 40px;
-    font-weight: 400;
+    font:400 40px Dela Gothic One;
     line-height: 40px;
     letter-spacing: -0.02em;
     text-align: left;
@@ -82,9 +76,7 @@ main .first_block {
 }
 
 .first_block .lights span {
-    font-family: Dela Gothic One;
-    font-size: 40px;
-    font-weight: 400;
+    font:400 40px Dela Gothic One;
     line-height: 40px;
     letter-spacing: -0.02em;
     text-align: left;
@@ -108,7 +100,6 @@ main .first_block {
 main .second_block {
     display: flex;
     justify-content: space-between;
-    /* background-size: 100%; */
     background: white;
     margin: 0 auto;
     margin-top: 77px;
@@ -134,7 +125,6 @@ main .second_block {
 
 .second_block .mini_games_learn p {
     font: 600 18px Montserrat;
-    /* line-height: 25.2px; */
     letter-spacing: -0.04em;
     text-align: left;
     color: #757575;
@@ -184,7 +174,6 @@ main .second_block {
     margin-top: 30px;
     font: 600 18px Montserrat;
     width: 397px;
-    /* line-height: 25.2px; */
     letter-spacing: -0.04em;
     text-align: left;
     color: #757575;
