@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { createUser, authUser } from '../service/api.service';
 import { iUser } from '../interfaces/interfaces';
 import buildResponse from '../helper/buildResponse';
+const createToken = require('../helper/jwt');
 const routeApi = Router();
 
 routeApi.post('/reg', async (req: Request, res: Response) => {
@@ -18,7 +19,11 @@ routeApi.post('/auth', async (req: Request, res: Response) => {
   try {
     const { email, pwd } = req.body;
     const data: iUser[] = await authUser(email, pwd);
-    buildResponse(201, data, res);
+    const token: string = createToken(data);
+    res.cookie('accessToken', token,{
+      secure: true
+    })
+    buildResponse(201, 'sucsess', res);
   } catch (er: any) {
     buildResponse(404, er.message, res);
   }

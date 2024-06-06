@@ -4,6 +4,7 @@ import router from './controller/user.controller';
 import routeCourse from './controller/course.controller';
 import routeApi from './controller/api.controller';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 const app = express();
 
 app.use(cors({
@@ -13,7 +14,7 @@ app.use(cors({
 }));
 
 app.use(json());
-
+app.use(cookieParser());
 app.use('/user', router);
 app.use('/course', routeCourse);
 app.use('/api', routeApi);

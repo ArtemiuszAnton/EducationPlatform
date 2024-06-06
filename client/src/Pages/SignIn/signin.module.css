@@ -1,7 +1,7 @@
 .background {
     background-color: #F6F5F4;
-    padding-top: 81px;
-    padding-bottom: 81px;
+    padding-top: 153px;
+    padding-bottom: 153px;
 }
 
 .content {
@@ -47,7 +47,7 @@
 }
 
 .content .image {
-    background-image: url('./assets/334.svg');
+    background-image: url('./assets/33.svg');
     width: 481px;
     height: 320px;
     background-size: contain;
