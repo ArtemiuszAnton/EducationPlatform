@@ -1,5 +1,5 @@
 import { iCourse } from '../interfaces/interfaces';
-import { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, updateCourseInfoDB } from '../repository/course.repository';
+import { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, updateCourseInfoDB, getCourseByIdDB } from '../repository/course.repository';
 
 async function createCourse(course: string, description: string): Promise<iCourse[]> {
   const data: iCourse[] = await createCourseDB(course, description);
@@ -10,6 +10,12 @@ async function createCourse(course: string, description: string): Promise<iCours
 async function getAllCourses(): Promise<iCourse[]> {
   const data: iCourse[] = await getAllCoursesDB();
   if (!data.length) throw new Error('data is empty');
+  return data;
+}
+
+async function getCourseById(id: string): Promise<iCourse[]> {
+  const data: iCourse[] = await getCourseByIdDB(id);
+  if (!data.length) throw new Error('Id is not found');
   return data;
 }
 
@@ -29,4 +35,4 @@ async function updateCourseInfo(id: number, body: iCourse): Promise<iCourse[]> {
   return data;
 }
 
-export { createCourse, getAllCourses, updateCourse, deleteCourse, updateCourseInfo };
+export { createCourse, getAllCourses, updateCourse, deleteCourse, updateCourseInfo, getCourseById };

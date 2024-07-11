@@ -5,6 +5,8 @@ import Courses from './Pages/Courses/Courses';
 import Lessons from './Pages/Lessons/Lessons';
 import SignUp from './Pages/SignUp/SignUp';
 import SignIn from './Pages/SignIn/SignIn';
+import SingleCourse from './Pages/SingleCourse/SingleCourse';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path='/lessons' element={<Lessons />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/singlecourse/:id' element={<SingleCourse />} />
       </Routes>
     </div>
   );

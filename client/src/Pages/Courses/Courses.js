@@ -1,9 +1,24 @@
 import style from './courses.module.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 function Courses() {
 
+    const [data, setData] = useState([]);
+
+    const getAllCourses = async () => {
+        const response = await axios.get('http://localhost:3001/course');
+        setData(response.data);
+        console.log(response.data);
+    }
+
+    useEffect(() => {
+        getAllCourses();
+    }, [])
 
     const sections = [
 
@@ -32,20 +47,24 @@ function Courses() {
                     <h1>Courses</h1>
                 </div>
             </div>
-            {sections.map((el, i) => <div key={i} className={style.section}>
-                <div className={el.image}></div>
-                <div className={style.info}>
-                    <h1>{el.course}</h1>
-                    <div className={style.line}></div>
-                    <p>{el.description}</p>
+            {data.map((el, i) =>
+                 <Link key={i} to={`/singlecourse/${el.id}`}>
+                <div className={style.section}>
+                    <div className={style.img_students_1}></div>
+                    <div className={style.info}>
+                        <h1>{el.course}</h1>
+                        <div className={style.line}></div>
+                        <p>{el.description}</p>
+                    </div>
                 </div>
-            </div>)}
+            </Link>)}
+
 
         </div>
 
         <Footer />
 
-    </div>
+    </div >
 }
 
 export default Courses;

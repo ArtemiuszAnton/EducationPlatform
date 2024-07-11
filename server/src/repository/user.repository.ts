@@ -22,12 +22,14 @@ async function getAllUserDB(): Promise<iUser[]> {
   const client = await pool.connect();
   const sql: string = 'SELECT * FROM users ORDER BY id ASC';
   const { rows } = await client.query(sql);
+  client.release();
   return rows;
 }
 async function getUserByIdDB(id: number): Promise<iUser[]> {
   const client = await pool.connect();
   const sql: string = 'SELECT * FROM users WHERE id = $1 ORDER BY id ASC';
   const { rows } = await client.query(sql, [id]);
+  client.release();
   return rows;
 }
 

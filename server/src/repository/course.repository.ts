@@ -22,8 +22,18 @@ async function getAllCoursesDB() {
   const client = await pool.connect();
   const sql: string = 'SELECT * FROM courses ORDER BY id ASC';
   const { rows } = await client.query(sql);
+  client.release();
   return rows;
 }
+
+async function getCourseByIdDB(id: string): Promise<iCourse[]> {
+  const client = await pool.connect();
+  const sql: string = 'select * from courses where id = $1';
+  const { rows } = await client.query(sql, [id]);
+  client.release();
+  return rows;
+}
+
 
 async function updateCourseDB(id: number, course: string, description: string) {
   const client = await pool.connect();
@@ -79,4 +89,4 @@ async function updateCourseInfoDB(id: number, body: iCourse) {
   }
 }
 
-export { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, updateCourseInfoDB };
+export { createCourseDB, getAllCoursesDB, updateCourseDB, deleteCourseDB, updateCourseInfoDB, getCourseByIdDB};

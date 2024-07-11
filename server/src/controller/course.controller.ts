@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { createCourse, getAllCourses, updateCourse, deleteCourse, updateCourseInfo } from '../service/course.service';
+import { createCourse, getAllCourses, getCourseById, updateCourse, deleteCourse, updateCourseInfo } from '../service/course.service';
 import buildResponse from '../helper/buildResponse';
 import { iCourse } from '../interfaces/interfaces';
 const routeCourse = Router();
@@ -20,6 +20,17 @@ routeCourse.get('/', async (_req: Request, res: Response) => {
     buildResponse(200, data, res);
   } catch (er: any) {
     buildResponse(404, er.message, res);
+  }
+});
+
+routeCourse.get('/:id', async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const data: iCourse[] = await getCourseById(id)
+;
+    buildResponse(200, data, res);
+  } catch (error: any) {
+    buildResponse(400, error.message, res);
   }
 });
 
