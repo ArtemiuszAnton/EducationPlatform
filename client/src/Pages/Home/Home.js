@@ -28,14 +28,17 @@ function Home() {
             </div>
 
             <div className={style.second_block}>
-                <div className={style.dzen_student}></div>
+                <div className={style.wrapper_width}>
 
-                <div className={style.mini_games_learn}>
-                    <h1>Learn a language in a playful way</h1>
-                    <p>Make learning programming langueges more fun with mini-games</p>
-                    <div className={style.game_links}>
-                        <div className={style.sprint_game}></div>
-                        <div className={style.tasks_game}></div>
+                    <div className={style.dzen_student}></div>
+
+                    <div className={style.mini_games_learn}>
+                        <h1>Learn a language in a playful way</h1>
+                        <p>Make learning programming langueges more fun with mini-games</p>
+                        <div className={style.game_links}>
+                            <div className={style.sprint_game}></div>
+                            <div className={style.tasks_game}></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,18 +54,20 @@ function Home() {
             </div>
 
             <div className={style.fourth_block}>
-                <div className={style.students_duet}></div>
+                <div className={style.wrapper_width}>
+                    <div className={style.students_duet}></div>
 
-                <div className={style.student_stat}>
-                    <h1>Watch your progress every day</h1>
-                    <p>Save statistics on your achievements and mistakes</p>
-                    <div>Statistics →</div>
+                    <div className={style.student_stat}>
+                        <h1>Watch your progress every day</h1>
+                        <p>Save statistics on your achievements and mistakes</p>
+                        <div>Statistics →</div>
+                    </div>
                 </div>
             </div>
 
         </main>
 
-        <Footer/>
+        <Footer />
 
     </div>
 }

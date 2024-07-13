@@ -3,18 +3,20 @@ main {
     flex-direction: column;
     align-items: center;
     /* width: 1180px; */
-    margin: auto;
-    max-width: 1220px;
+    /* margin: auto;
+    max-width: 1220px; */
 }
 
 main .first_block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+    max-width: 1220px;
 }
 
 .first_block .left_side {
-    margin-top: 95px;
+    margin: 95px 0;
     width: 500px;
 
 }
@@ -68,7 +70,7 @@ main .first_block {
 
 .first_block .lights p {
     margin-top: 49px;
-    font:400 40px Dela Gothic One;
+    font: 400 40px Dela Gothic One;
     line-height: 40px;
     letter-spacing: -0.02em;
     text-align: left;
@@ -76,7 +78,7 @@ main .first_block {
 }
 
 .first_block .lights span {
-    font:400 40px Dela Gothic One;
+    font: 400 40px Dela Gothic One;
     line-height: 40px;
     letter-spacing: -0.02em;
     text-align: left;
@@ -98,11 +100,16 @@ main .first_block {
 }
 
 main .second_block {
-    display: flex;
-    justify-content: space-between;
     background: white;
     margin: 0 auto;
-    margin-top: 77px;
+    width: 100%;
+}
+
+.wrapper_width {
+    max-width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    margin: 77px auto;
 }
 
 .second_block .dzen_student {
@@ -202,11 +209,9 @@ main .second_block {
 }
 
 .fourth_block {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 95px;
     background: white;
-
+    width: 100%;
 }
 
 .fourth_block .students_duet {
@@ -216,15 +221,18 @@ main .second_block {
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 100px;
-    margin-top: 95px;
+    /* margin-top: 95px; */
 }
 
 .fourth_block .student_stat {
     width: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .fourth_block .student_stat h1 {
-    margin-top: 149px;
+    /* margin-top: 149px; */
     font: 400 47px Dela Gothic One;
     line-height: 48px;
     text-align: left;

@@ -9,19 +9,23 @@ import axios from "axios";
 function SingleCourse() {
 
     const objWithId = useParams();
-    console.log(objWithId);
+
 
     const [data, setData] = useState([]);
+    const [lesson, setLesson] = useState([]);
 
     const getCoursesById = async () => {
         const response = await axios.get(`http://localhost:3001/course/${objWithId.id}`);
         setData(response.data);
-        console.log(response.data);
+        const responseLessons = await axios.get(`http://localhost:3001/lessons/${objWithId.id}`);
+        setLesson(responseLessons.data)
     }
 
     useEffect(() => {
         getCoursesById();
     }, [])
+
+
 
     return <div>
         <Header />
@@ -41,11 +45,7 @@ function SingleCourse() {
                 </div>
                 <div className={style.tests}>
                     <h1>15 lessons</h1>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
+                    {lesson.map((el, i) => <p key={i}>{i + 1}. {el.title}</p>)}
                 </div>
             </div>
         </div>

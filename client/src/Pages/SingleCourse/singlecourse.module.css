@@ -71,18 +71,23 @@
     padding: 14px 20px;
     border-radius: 100px;
     background: #C3DCE3;
-    color: #2B788B;
-    font: 700 16px Montserrat;
-    letter-spacing: -0.04em;
     margin-bottom: 49px;
     margin-top: 32px;
     border-width: 0;
 }
 
+.content_left button a {
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
 .tests {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 15px;
+    /* justify-content: space-between; */
     align-items: flex-start;
     width: 401px;
     height: 374px;

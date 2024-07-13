@@ -1,5 +1,7 @@
 footer {
     padding: 40px 0 40px 0;
+    max-width: 1220px;
+    margin: auto;
 }
 
 .links {
